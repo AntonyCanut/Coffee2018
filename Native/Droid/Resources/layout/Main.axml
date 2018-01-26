@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="325.5dp"
+        android:src="@drawable/coffeewallpaper"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Click Me!"
+        android:background="#e51b7f"
+        android:foreground="@android:color/white"
+        android:layout_gravity="center" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:ViewBase
+    xmlns:local="clr-namespace:Coffee2018.Forms.Views"
+    xmlns:vm="clr-namespace:Coffee2018.ViewModels"
+    x:TypeArguments="vm:CoffeeListViewModel"
+	xmlns ="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Coffee2018.Forms.Views.CoffeeListPage">
+	<ContentPage.Content>
+        <Grid>
+            <ListView ItemsSource="{Binding ListCoffee}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding fields.nom_du_cafe}"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Row="1"
+                                       Text="{Binding fields.adresse}"
+                                       TextColor="Black"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+	</ContentPage.Content>
+</local:ViewBase>

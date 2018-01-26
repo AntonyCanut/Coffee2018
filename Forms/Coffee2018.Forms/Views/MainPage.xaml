@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<local:ViewBase x:Class="Coffee2018.Forms.Views.MainPage"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:Coffee2018.Forms.Views"
+                xmlns:vm="clr-namespace:Coffee2018.ViewModels"
+                x:TypeArguments="vm:MainViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Aspect="AspectFill"
+                   Source="coffeeWallpaper" />
+
+            <Button Grid.Row="3"
+                    Grid.Column="1"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#e51b7f"
+                    BorderWidth="2"
+                    Command="{Binding CoffeeCommand}"
+                    Text="CLICK ME!"
+                    TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</local:ViewBase>
